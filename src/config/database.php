@@ -34,6 +34,11 @@ return [
     */
 
     'connections' => [
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('MONGODB_URI', 'mongodb+srv://aniketteltumbade:MAQTwLHHs2qNgnzl@pirates-of-the-caribbea.dkwex0s.mongodb.net/'),
+            'database' => 'moviesquest',
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',

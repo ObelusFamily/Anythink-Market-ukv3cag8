@@ -37,6 +37,7 @@ RUN pecl install -o -f redis \
 &&  docker-php-ext-enable redis \
 &&  docker-php-ext-enable pdo_mysql
 
+RUN sudo pecl install mongodb
 # Task: copy rep's PHP .ini files to be automatically parsed
 #
 # directory is related to the PHP service context
