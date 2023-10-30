@@ -34,6 +34,11 @@ return [
     */
 
     'connections' => [
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('MONGODB_URI'),
+            'database' => 'myappdb',
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
