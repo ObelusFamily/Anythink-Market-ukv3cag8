@@ -19,7 +19,7 @@ services:
       - ./.docker/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - php
-      - mysql_service
+      # - mysql_service
 
   # PHP Service
   php:    
@@ -34,18 +34,18 @@ services:
       - ./src:/var/www/htdoc
     environment:
       - DATABASE_URL=mysql://root:rootpassword@mysql_service:3306/mydatabase
-    depends_on:
-      - mysql_service
+    # depends_on:
+      # - mysql_service
 
 
 
   # MySQL Service
-  mysql_service:
-    image: mysql:5.7
+  # mysql_service:
+  #   image: mysql:5.7
 
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: rootpassword
+  #     MYSQL_DATABASE: mydatabase
 
 
 #  redis:
